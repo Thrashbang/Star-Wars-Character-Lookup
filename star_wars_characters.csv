@@ -1,7 +1,9 @@
 Name,Title,Order,Lightsaber Color
-Anakin Skywalker,Darth Vader,Sith,Red
-Obi-Wan Kenobi,Master Kenobi,Jedi,Blue
+Anakin Skywalker,Darth Vader.Lord Vader,Sith,Blue.Red
+Din Djarin,The Mandolorian,Mandolorian,Dark
+Obi-Wan Kenobi.Ben Kenobi,Master Kenobi.General Kenobi,Jedi,Blue
 Mace Windu,Master Windu,Jedi,Purple
 Qui-Gon Jinn,Master Jinn,Jedi,Green
-Sheev Palpatine,Darth Sidious,Sith,Red
-Jar Jar Binks,General Binks,,
+Sheev Palpatine,Darth Sidious.Emperor Palpatine.Chancellor Palpatine,Sith,Red
+Jar Jar Binks,General Binks,####,####
+Rey Palpatine,####,Jedi,Blue
