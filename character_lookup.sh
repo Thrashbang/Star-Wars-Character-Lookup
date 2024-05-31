@@ -12,33 +12,38 @@ else
 fi
 
 
-cat star_wars_characters.csv | while IFS="," read name title order color
+cat star_wars_characters.csv | while IFS="," read names titles orders colors
 do
   if [[ $query_selector == 1 ]]
-  then 
-    if [[ $search_query == $name ]]
-    then
-      echo -e "\nName: $name\nTitle: $title\nOrder: $order\nLightsaber Color: $color"
-    fi
+  then
+    echo $names | while IFS="." read -r name
+    do 
+      if [[ $search_query == $name ]]
+      then
+        echo -e "\nName: $names\nTitle: $titles\nOrder: $orders\nLightsaber Color: $colors"
+      fi
+    done
   elif [[ $query_selector == 2 ]]
   then 
-    if [[ $search_query == $title ]]
+    if [[ $search_query == $titles ]]
     then
-      echo -e "\nName: $name\nTitle: $title\nOrder: $order\nLightsaber Color: $color"
+      echo -e "\nName: $names\nTitle: $titles\nOrder: $orders\nLightsaber Color: $colors"
     fi
   elif [[ $query_selector == 3 ]]
   then 
-    if [[ $search_query == $order ]]
+    if [[ $search_query == $orders ]]
     then
-      echo -e "\nName: $name\nTitle: $title\nOrder: $order\nLightsaber Color: $color"
+      echo -e "\nName: $names\nTitle: $titles\nOrder: $orders\nLightsaber Color: $colors"
     fi
   elif [[ $query_selector == 4 ]]
   then 
-    if [[ $search_query == $color ]]
+    if [[ $search_query == $colors ]]
     then
-      echo -e "\nName: $name\nTitle: $title\nOrder: $order\nLightsaber Color: $color"
+      echo -e "\nName: $names\nTitle: $titles\nOrder: $orders\nLightsaber Color: $colors"
     fi
   fi
 done
+
+
 
 exit
